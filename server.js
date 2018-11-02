@@ -59,11 +59,23 @@ server.post("/api/tables", function(req, res) {
 
   console.log(newtable);
 
-  tables.push(newtable);
+
+  if (tables.length < 2){
+    tables.push(newtable);
+  }
+  else {
+    waitlist.push(newtable);
+  }
 
   res.json(newtable);
 });
 
+
+
+// Create New reservations - takes in JSON input
+server.get("/api/waitlist", function(req, res) {
+
+});
 
 
 server.listen(PORT, function () {
