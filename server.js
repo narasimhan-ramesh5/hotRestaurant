@@ -55,14 +55,16 @@ server.post("/api/tables", function(req, res) {
 
   // Using a RegEx Pattern to remove spaces from newCharacter
   // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-  newtable.routeName = newtable.name.replace(/\s+/g, "").toLowerCase();
+  newtable.routeName = newtable.customerName.replace(/\s+/g, "").toLowerCase();
 
   console.log(newtable);
 
-  table.push(newtable);
+  tables.push(newtable);
 
   res.json(newtable);
 });
+
+
 
 server.listen(PORT, function () {
   console.log("Server listening on: http://localhost:" + PORT);
