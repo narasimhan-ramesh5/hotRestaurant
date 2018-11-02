@@ -59,12 +59,13 @@ server.post("/api/tables", function(req, res) {
 
   console.log(newtable);
 
+
   if (tables.length < 2){
-  tables.push(newtable);
-}
-else {
-  waitlist.push(newtable);
-}
+    tables.push(newtable);
+  }
+  else {
+    waitlist.push(newtable);
+  }
 
   res.json(newtable);
 });
