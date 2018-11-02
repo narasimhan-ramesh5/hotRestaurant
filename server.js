@@ -55,14 +55,27 @@ server.post("/api/tables", function(req, res) {
 
   // Using a RegEx Pattern to remove spaces from newCharacter
   // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-  newtable.routeName = newtable.name.replace(/\s+/g, "").toLowerCase();
+  newtable.routeName = newtable.customerName.replace(/\s+/g, "").toLowerCase();
 
   console.log(newtable);
 
-  table.push(newtable);
+  if (tables.length < 2){
+  tables.push(newtable);
+}
+else {
+  waitlist.push(newtable);
+}
 
   res.json(newtable);
 });
+
+
+
+// Create New reservations - takes in JSON input
+server.get("/api/waitlist", function(req, res) {
+
+});
+
 
 server.listen(PORT, function () {
   console.log("Server listening on: http://localhost:" + PORT);
