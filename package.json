@@ -1,0 +1,25 @@
+{
+  "name": "hotrestaurant",
+  "version": "1.0.0",
+  "description": "Full stack application that implements a restaurant waiting list.",
+  "main": "logic.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/narasimhan-ramesh5/hotRestaurant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/narasimhan-ramesh5/hotRestaurant/issues"
+  },
+  "homepage": "https://github.com/narasimhan-ramesh5/hotRestaurant#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  }
+}
